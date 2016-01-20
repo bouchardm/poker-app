@@ -12,7 +12,7 @@
     "vue": "^1.0.0",
     "jquery": "^2.2.0",
     "jquery-countdown": "^2.0.5",
-    "bootstap": "^3.3.6"
+    "bootstrap": "^3.3.6"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
