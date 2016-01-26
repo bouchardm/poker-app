@@ -9,10 +9,11 @@
     "test": "karma start build/karma.conf.js --single-run"
   },
   "dependencies": {
-    "vue": "^1.0.0",
+    "bootstrap": "^3.3.6",
+    "bootstrap-material-design": "^0.5.7",
     "jquery": "^2.2.0",
     "jquery-countdown": "^2.0.5",
-    "bootstrap": "^3.3.6"
+    "vue": "^1.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",

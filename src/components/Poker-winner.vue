@@ -1,7 +1,13 @@
 <template>
-    <form v-show="!showWinner" @submit.prevent>
-        Number of person: <input type="number" v-model="nbPerson">
-        Cash by person: <input type="number" v-model="cashPerson">
+    <form v-show="!showWinner" @submit.prevent class="form-inline">
+        <div class="form-group label-floating">
+            <label for="form-nbPerson" class="control-label">Number of person</label>
+            <input type="number" v-model="nbPerson" class="form-control" id="form-nbPerson">
+        </div>
+        <div class="form-group label-floating">
+            <label for="form-cashPerson" class="control-label">Cash by person</label>
+            <input type="number" v-model="cashPerson" class="form-control" id="form-cashPerson">
+        </div>
     </form>
 
     <div class="poker-winner">

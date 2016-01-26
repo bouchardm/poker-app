@@ -1,11 +1,24 @@
 <template>
-    <form action="" v-show=" ! timerStart" @submit.prevent>
-        <input type="number" v-model="hours">:<input type="number" v-model="minutes">:<input type="number" v-model="seconds">
-        <button @click="toggleTimer">Play</button>
+    <form action="" v-show=" ! timerStart" @submit.prevent class="form-inline">
+        <div class="form-group label-floating">
+            <label for="form-hours" class="control-label">Hours</label>
+            <input type="number" v-model="hours" class="form-control" id="form-hours">
+        </div>
+        :
+        <div class="form-group label-floating">
+            <label for="form-minutes" class="control-label">Minutes</label>
+            <input type="number" v-model="minutes" class="form-control" id="form-minutes">
+        </div>
+        :
+        <div class="form-group label-floating">
+            <label for="form-seconds" class="control-label">Minutes</label>
+            <input type="number" v-model="seconds" class="form-control" id="form-seconds">
+        </div>
+        <button @click="toggleTimer" class="btn btn-primary btn-raised">Play</button>
     </form>
 
     <span class="h2" id="poker-timer" v-show="timerStart"></span>
-    <button @click="toggleTimer" v-show="timerStart">Pause</button>
+    <button @click="toggleTimer" v-show="timerStart" class="btn btn-primary btn-raised">Pause</button>
 </template>
 
 <style>
