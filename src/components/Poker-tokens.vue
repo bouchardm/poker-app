@@ -2,7 +2,7 @@
     <form @submit.prevent="addJeton" class="form-inline">
         <div class="form-group label-floating">
             <label for="form-color" class="control-label">Color</label>
-            <input type="text" v-model="color" class="form-control" id="form-color">
+            <input type="text" v-model="color" v-el:color-input class="form-control" id="form-color">
         </div>
         <div class="form-group label-floating">
             <label for="form-value" class="control-label">Value</label>
@@ -41,7 +41,9 @@
                 this.jetons.push({
                     value: this.value,
                     color: this.color
-                })
+                });
+                this.$els.colorInput.focus();
+                this.$els.colorInput.select();
             },
             remove: function(index) {
                 this.jetons.splice(index, 1);
