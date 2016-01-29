@@ -13,7 +13,11 @@
     "bootstrap-material-design": "^0.5.7",
     "jquery": "^2.2.0",
     "jquery-countdown": "^2.0.5",
-    "vue": "^1.0.0"
+    "script-loader": "^0.6.1",
+    "vue": "^1.0.0",
+    "css-loader": "^0.23.1",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
@@ -40,7 +44,6 @@
     "karma-webpack": "^1.7.0",
     "phantomjs": "^1.9.19",
     "rimraf": "^2.5.0",
-    "url-loader": "^0.5.7",
     "vue-hot-reload-api": "^1.2.0",
     "vue-html-loader": "^1.0.0",
     "vue-loader": "^8.0.0",

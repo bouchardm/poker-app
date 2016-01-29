@@ -4,23 +4,15 @@
     <meta charset="utf-8">
     <title>poker</title>
 
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <link href="../node_modules/bootstrap-material-design/dist/css/bootstrap-material-design.css" rel="stylesheet">
-    <link href="../node_modules/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet">
-
-
 
     {% for (var css in o.htmlWebpackPlugin.files.css) { %}
     <link href="{%=o.htmlWebpackPlugin.files.css[css] %}" rel="stylesheet">
     {% } %}
-
   </head>
   <body>
-
     <div class="container">
       <app></app>
     </div>
@@ -28,14 +20,5 @@
     {% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
       <script src="{%=o.htmlWebpackPlugin.files.chunks[chunk].entry %}"></script>
     {% } %}
-
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../node_modules/bootstrap-material-design/dist/js/material.min.js"></script>
-    <script src="../node_modules/bootstrap-material-design/dist/js/ripples.min.js"></script>
-    <script>
-      $( document ).ready(function() {
-        $.material.init();
-      });
-    </script>
   </body>
 </html>
