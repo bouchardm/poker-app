@@ -6,11 +6,15 @@
             <h1>Timer</h1>
             <poker-timer></poker-timer>
 
+            <h1>Blind: <poker-blind></poker-blind></h1>
+
             <h1>Tokens</h1>
             <poker-tokens></poker-tokens>
 
-            <h1>Winner</h1>
-            <poker-winner></poker-winner>
+            <h1>Winner <span class="btn btn-primary btn-raised" @click="showWinner = !showWinner">{{ showWinner ? '-' : '+' }}</span></h1>
+            <div v-show="showWinner">
+                <poker-winner></poker-winner>
+            </div>
         </div>
         <div class="col-lg-4">
             <h1>Rules</h1>
@@ -31,14 +35,21 @@
     import PokerTimer from './components/Poker-timer.vue'
     import PokerWinner from './components/Poker-winner.vue'
     import PokerTokens from './components/Poker-tokens.vue'
+    import PokerBlind from './components/Poker-blind.vue'
 
     export default {
         components: {
-            PokerTimer, PokerWinner, PokerTokens
+            PokerTimer, PokerWinner, PokerTokens, PokerBlind
         },
         data: function() {
             return {
                 showWinner: false
+            }
+        },
+        events: {
+            'timer': function(timestamp) {
+                console.log(timestamp);
+                this.$broadcast('timer', timestamp);
             }
         }
     }

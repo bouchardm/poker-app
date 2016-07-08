@@ -1,4 +1,10 @@
 <template>
+    <ul id="jetons">
+        <li v-for="(index, jeton) in jetons">
+            {{ jeton.color }}: {{ jeton.value }}
+            <button @click="remove(index)" class="btn btn-danger btn-raised">X</button>
+        </li>
+    </ul>
     <form @submit.prevent="addJeton" class="form-inline">
         <div class="form-group label-floating">
             <label for="form-color" class="control-label">Color</label>
@@ -10,12 +16,6 @@
         </div>
         <button class="btn btn-primary btn-raised">Add</button>
     </form>
-    <ul id="jetons">
-        <li v-for="(index, jeton) in jetons">
-            {{ jeton.color }}: {{ jeton.value }}
-            <button @click="remove(index)" class="btn btn-danger btn-raised">X</button>
-        </li>
-    </ul>
 </template>
 
 <style>
